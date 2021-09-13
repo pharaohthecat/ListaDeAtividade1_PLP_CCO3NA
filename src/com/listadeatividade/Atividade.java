@@ -30,15 +30,19 @@ public class Atividade {
                     break;
 
                 case 2:
+                    System.out.println("Q2 Sucess");
                     break;
 
                 case 3:
+                    System.out.println("Q3 Sucess");
                     break;
 
                 case 4:
+                    System.out.println("Q4 Sucess");
                     break;
 
                 case 5:
+                    System.out.println("Q5 Sucess");
                     break;
             }
         }

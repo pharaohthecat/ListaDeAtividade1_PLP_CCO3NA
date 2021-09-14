@@ -1,9 +1,10 @@
 package com.listadeatividade;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Atividade {
-    public static void main(String[] args) { //Main
+    public static void main(String[] args) throws IOException { //Main
         Scanner sc = new Scanner(System.in); //Funcao Leia
         //Enquanto verdadeiro faça
         while (true) {
@@ -26,7 +27,34 @@ public class Atividade {
 
             switch(opcao){
                 case 1:
-                    System.out.println("Q1 Sucess");
+                    //Primeira pessoa
+                    sc.nextLine();
+                    System.out.println("Dados da primeira pessoa:");
+                    System.out.println("Nome: ");
+                    String nome1 = sc.nextLine();
+                    System.out.println("Idade: ");
+                    int idade1 = sc.nextInt();
+
+                    sc.nextLine();
+
+                    //Segunda pessoa
+                    System.out.println("Dados da segunda pessoa:");
+                    System.out.println("Nome: ");
+                    String nome2 = sc.nextLine();
+                    System.out.println("Idade: ");
+                    int idade2 = sc.nextInt();
+
+                    if (idade1 > idade2){
+                        System.out.println("Pessoa mais velha: "+nome1);
+                    }
+                    else if (idade1 == idade2){
+                        System.out.println("Mesma idade...");
+                    }
+                    else{
+                        System.out.println("Pessoa mais velha: "+nome2);
+                    }
+                    System.out.println("Pressione Qualquer Tecla...");
+                    System.in.read(); //Pause
                     break;
 
                 case 2:

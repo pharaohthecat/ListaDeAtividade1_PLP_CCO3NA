@@ -84,7 +84,21 @@ public class Atividade {
                     break;
 
                 case 3:
-                    System.out.println("Q3 Sucess");
+                    sc.nextLine(); //Limpar o buffer
+                    System.out.println("Entre a largura e a altura do retangulo:");
+                    double largura = sc.nextDouble();
+                    double altura = sc.nextDouble();
+
+                    double area = largura*altura;
+                    double perimetro = 2*(largura+altura);
+                    double diagonal = Math.sqrt((largura*largura)+(altura*altura));
+
+                    System.out.printf("AREA = %.2f \n", area);
+                    System.out.printf("PERIMETRO = %.2f \n", perimetro);
+                    System.out.printf("DIAGONAL = %.2f \n", diagonal);
+
+                    System.out.println("Pressione Qualquer Tecla...");
+                    System.in.read(); //Pause
                     break;
 
                 case 4:

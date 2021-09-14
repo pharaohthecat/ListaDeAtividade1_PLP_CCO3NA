@@ -16,7 +16,7 @@ public class Atividade {
             System.out.println("5 - Quinta Questao");
             System.out.println("0 - Encerrar");
 
-            System.out.printf("\nDigite sua opçao: ");
+            System.out.printf("\nDigite sua opcao: ");
             int opcao = sc.nextInt();
 
             if (opcao == 0){
@@ -102,11 +102,31 @@ public class Atividade {
                     break;
 
                 case 4:
-                    System.out.println("Q4 Sucess");
+                    sc.nextLine(); //Limpar o buffer
+                    System.out.println("Nome:");
+                    String nome = sc.nextLine();
+                    System.out.println("Salario Bruto:");
+                    double salarioBruto = sc.nextDouble();
+                    System.out.println("Imposto:");
+                    double imposto = sc.nextDouble();
+
+                    double salarioLiquido = salarioBruto - imposto;
+
+                    System.out.printf("Funcionario: %s, R$ %.2f",nome,salarioLiquido);
+                    System.out.println("\nDigite a porcetagem para aumentar o salario:");
+                    int porcetagem = sc.nextInt();
+
+                    double salarioFinal = salarioLiquido + (salarioLiquido * porcetagem / 100.0);
+
+                    System.out.printf("Dados atualizados: %s, R$ %.2f \n", nome, salarioFinal);
+
+                    System.out.println("Pressione Qualquer Tecla...");
+                    System.in.read(); //Pause
                     break;
 
+
                 case 5:
-                    System.out.println("Q5 Sucess");
+                    
                     break;
             }
         }

@@ -126,7 +126,28 @@ public class Atividade {
 
 
                 case 5:
-                    
+                    sc.nextLine(); //Limpar o buffer
+                    System.out.println("Nome do aluno:");
+                    String nomeAluno = sc.nextLine();
+                    System.out.println("Digite as tres notas do aluno:");
+                    double nota1 = sc.nextDouble();
+                    double nota2 = sc.nextDouble();
+                    double nota3 = sc.nextDouble();
+
+                    double notaFinal = nota1+nota2+nota3;
+                    System.out.printf("NOTA FINAL = %.2f \n", notaFinal);
+
+                    if(notaFinal >= 60){
+                        System.out.println("APROVADO!");
+                    }
+
+                    else{
+                        System.out.println("REPROVADO!");
+                        System.out.println("FALTARAM "+(60-notaFinal)+" PONTOS");
+                    }
+
+                    System.out.println("Pressione Qualquer Tecla...");
+                    System.in.read(); //Pause
                     break;
             }
         }

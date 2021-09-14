@@ -27,15 +27,16 @@ public class Atividade {
 
             switch(opcao){
                 case 1:
+                    sc.nextLine(); //Limpar o buffer
+
                     //Primeira pessoa
-                    sc.nextLine();
                     System.out.println("Dados da primeira pessoa:");
                     System.out.println("Nome: ");
                     String nome1 = sc.nextLine();
                     System.out.println("Idade: ");
                     int idade1 = sc.nextInt();
 
-                    sc.nextLine();
+                    sc.nextLine(); //Limpar o buffer
 
                     //Segunda pessoa
                     System.out.println("Dados da segunda pessoa:");
@@ -58,7 +59,28 @@ public class Atividade {
                     break;
 
                 case 2:
-                    System.out.println("Q2 Sucess");
+                    //Primeiro Funcionário
+                    sc.nextLine(); //Limpar o buffer
+                    System.out.println("Dados do primeiro funcionário:");
+                    System.out.println("Nome:");
+                    String nomeF1 = sc.nextLine();
+                    System.out.println("Salario:");
+                    double salarioF1 = sc.nextDouble();
+
+                    //Segundo Funcionário
+                    sc.nextLine(); //Limpar o buffer
+                    System.out.println("Dados do segundo funcionário:");
+                    System.out.println("Nome:");
+                    String nomeF2 = sc.nextLine();
+                    System.out.println("Salario:");
+                    double salarioF2 = sc.nextDouble();
+
+                    //Media
+                    double mediaSalario = (salarioF1+salarioF2)/2 ;
+
+                    System.out.printf("Salário médio = %.2f \n", mediaSalario);
+                    System.out.println("Pressione Qualquer Tecla...");
+                    System.in.read(); //Pause
                     break;
 
                 case 3:

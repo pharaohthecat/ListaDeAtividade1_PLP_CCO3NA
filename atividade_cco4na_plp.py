@@ -86,7 +86,7 @@ while (True):
         notafinal = (nota1 + nota2 + nota3)
         
         print('NOTA FINAL = {:.1f}'.format(notafinal))
-        if notafinal < 50:
+        if notafinal < 60:
             print('REPROVADO!')
             restante = (60-notafinal)
             print('FALTARAM {:.1f} PONTOS'.format(restante))
